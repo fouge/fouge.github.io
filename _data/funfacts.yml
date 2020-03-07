@@ -1,12 +1,10 @@
-- counter: 20000
-  icon: ion-ios-chatboxes-outline
-  text: Cups of Coffee
-- counter: 1500
-  icon: ion-ios-glasses-outline
-  text: Gallons of Soft Drink
-- counter: 1200
-  icon: ion-ios-compose-outline
-  text: Whiteboard Markers
-- counter: 300
-  icon: ion-ios-timer-outline
-  text: Websites built
+- icon: ion-planet
+  text: I visited around 25 countries during the last decade. <br/>Counting one 11-month world tour with my girlfriend 👫.
+- icon: ion-music-note
+  text: I love music festivals. I love music, I love being with friends 🎉. 
+- icon: ion-headphone
+  text: I listen to podcasts regularly. <br/>My preferences are "Young, Wild and Freelance", "Generation Do It Yourself", "La Martingale", "Tribu Indé" (all 🇫🇷).
+- icon: ion-heart
+  text: I track my heart rate during night. <br/>It's an important indicator of my health, and I can tell you that drinking an alcoholic drink increases by at least 10% my HR. Same as staying at 4000m over the sea level...
+- icon: ion-home
+  text: I moved 11 times in 7 cities during the last decade. I am now in Nantes for an unlimited amount of time. <br/>Between schools and internships, I discovered many parts of France and even San Francisco.
