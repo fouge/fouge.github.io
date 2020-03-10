@@ -25,13 +25,18 @@ logo: "/assets/logo.png"
 # Build settings
 markdown: kramdown
 
+future: true
+
 # Google analytics
 # ga_tracking_id: "UA-XXXX-1"
 
 # Category descriptions (for archive pages)
 descriptions:
-  - cat: jekyll
-    desc: "Posts describing Jekyll setup techniques."
+  - cat: misc
+    desc: "Miscellaneous posts"
 
-  - cat: dummy
-    desc: "Just some placeholder posts, lorem ipsum and the rest."
+  - cat: CI
+    desc: "Continuous Integration"
+
+  - cat: Debugging
+    desc: "Debugging related posts"
