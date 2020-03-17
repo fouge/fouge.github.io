@@ -28,7 +28,7 @@ markdown: kramdown
 future: true
 
 # Google analytics
-# ga_tracking_id: "UA-XXXX-1"
+ga_tracking_id: "UA-160868445-1"
 
 # Category descriptions (for archive pages)
 descriptions:
