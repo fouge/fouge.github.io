@@ -172,6 +172,9 @@ font header .navbar-default .navbar-nav li a:hover {
 #intro .section-title p {
   padding-top: 20px;
 }
+#intro .blog-tags li {
+  display: inline-block;
+}
 /*--
 	service Start
 --*/

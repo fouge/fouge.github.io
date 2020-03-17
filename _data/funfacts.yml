@@ -1,12 +1,16 @@
 - icon: ion-planet
-  text: I visited around 25 countries during the last decade. <br/>Counting one 11-month world tour with my girlfriend 👫.
-- icon: ion-music-note
-  text: I love music festivals. I love music, I love being with friends 🎉. 
-- icon: ion-headphone
-  text: I listen to podcasts regularly. <br/>My preferences are "Young, Wild and Freelance", "Generation Do It Yourself", "La Martingale", "Tribu Indé" (all 🇫🇷).
-- icon: ion-heart
-  text: I track my heart rate during night. <br/>It's an important indicator of my health, and I can tell you that drinking an alcoholic drink increases by at least 10% my HR. Same as staying at 4000m over the sea level...
+  text: I visited around 25 countries during the last decade. <br/>Counting one 11-month world tour with my girlfriend 👫. <br/>To know everything about that trip, checkout <a href="https://www.polarsteps.com/c2tosee">our Polarstep </a>(🇫🇷)
 - icon: ion-home
   text: I moved 11 times in 7 cities during the last decade. I am now in Nantes for an unlimited amount of time. <br/>Between schools and internships, I discovered many parts of France and even San Francisco.
 - icon: ion-cash
-  text: I started to invest in cryptocurrencies in 2017. I initially got interested for the technical aspect, I am more and more interested in what DeFi has to offer. The Internet of Things is about to interact with distributed technologies.
+  text: I started to invest in cryptocurrencies in 2017. I initially got interested for the technical aspect, I am more and more interested in what DeFi has to offer.<br/>The Internet of Things is also about to interact with distributed technologies and I find it very exciting!<br/>If you want to get started, I advise the newsletter & podcast of <a href="https://banklesshq.com/">Bankless.</a>
+- icon: ion-bookmark
+  text: I read more on screens than I read books, but my goal for 2020 is to read 2 books/month.<br/>Like many, I advise to read "Sapiens" by Yuval Noah Harari. 🤓
+- icon: ion-email
+  text: I also read a lot of interesting newsletters.<br/>I can mention the newsletters of <a href="https://europeanstraits.substack.com"/>Nicolas Colin</a>, <a href="https://laetitiaatwork.substack.com/">Leatitia Vitaud</a> and <a href="https://nesslabs.com/newsletter">Anne-Laure Le Cunff</a>.
+- icon: ion-headphone
+  text: I listen to podcasts regularly. <br/>My preferences are <a href="https://thomasburbidge.com/podcast/">Young, Wild and Freelance</a>, <a href="https://www.gdiy.fr/">Generation Do It Yourself</a>, <a href="https://lamartingale.io/">La Martingale</a>, <a href="https://alexisminchella.com/podcast/">Tribu Indé</a> (all 🇫🇷).
+- icon: ion-heart
+  text: I track my heart rate during night. <br/>It's an important indicator of my health, and I can tell you that drinking an alcoholic drink increases by at least 10% my HR during the following night. Same as sleeping at 4000m over the sea level...
+- icon: ion-music-note
+  text: I love music festivals. I love music, I love being with friends 🎉. 

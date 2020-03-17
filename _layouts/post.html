@@ -10,6 +10,12 @@ layout: page
         <div>
           <div class="block">
             <h1>{{ page.title }}</h1>
+            <ul class="blog-tags">
+            {% for tags in page.meta %}
+            <li>
+              #{{ tags }}
+            </li>
+            {% endfor %}
             <div class="post-info-wrapper">
               <p class="italic">By <span class="bold">{{ page.author }}</span> on <span class="bold">{{ page.date | date: "%B %-d, %Y" }}</span></p>
             </div>
