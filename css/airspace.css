@@ -363,10 +363,7 @@ font header .navbar-default .navbar-nav li a:hover {
 /*---------------------------------------------
 					Work Start
 -----------------------------------------------*/
-/*--
-	Slider-work Start
---*/
-/*
+/* BLOG */ 
 #global-header {
   background: linear-gradient(to bottom right, #4dff4d, #d580ff) no-repeat;
   background-size: cover;
@@ -412,7 +409,7 @@ font header .navbar-default .navbar-nav li a:hover {
   color: #655E7A;
   padding: 10px 20px;
 }
-*/
+
 /*--
 	portfolio-work Start
 --*/
