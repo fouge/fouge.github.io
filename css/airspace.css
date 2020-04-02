@@ -14,7 +14,7 @@
 	Common Css
 --*/
 body {
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Merriweather', sans-serif;
   -webkit-font-smoothing: antialiased;
 }
 h1,
@@ -34,13 +34,14 @@ h3 {
   font-weight: 300;
 }
 p {
-  font-size: 15px;
+  font-size: 16px;
   line-height: 28px;
 }
 ul {
-  padding: 0;
-  margin: 0;
-  list-style: none;
+  /* padding: 0;
+  margin: 0; */
+  display: list-item;
+  list-style-type: none;
 }
 a,
 a:active,
@@ -172,9 +173,7 @@ font header .navbar-default .navbar-nav li a:hover {
 #intro .section-title p {
   padding-top: 20px;
 }
-#intro .blog-tags li {
-  display: inline-block;
-}
+
 /*--
 	service Start
 --*/
@@ -409,6 +408,35 @@ font header .navbar-default .navbar-nav li a:hover {
   color: #655E7A;
   padding: 10px 20px;
 }
+
+
+#blogpost h1 {
+}
+#blogpost p {
+  padding: 0px;
+  font-size: 16px;
+  line-height: 25px;
+}
+#blogpost .block {
+  margin-left:100px;
+  margin-right:100px;
+}
+#blogpost .container .row .block .blog-tags {
+  margin: 0px;
+  padding: 0px;
+  display: inline-block;
+}
+#blogpost .blog-content {
+  font-size: 16px;
+  line-height: 25px;
+}
+#blogpost .blog-content ul {
+  display: list-item;
+}
+#blogpost .blog-content li {
+  list-style-type: disc;
+}
+
 
 /*--
 	portfolio-work Start
@@ -699,7 +727,7 @@ font header .navbar-default .navbar-nav li a:hover {
   background: #47424C;
   border: none;
   color: #fff;
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Merriweather', sans-serif;
   font-size: 18px;
 }
 /*--
@@ -744,7 +772,7 @@ font header .navbar-default .navbar-nav li a:hover {
   width: 100%;
 }
 #contact-box .block h2 {
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Merriweather', sans-serif;
   font-weight: 300;
   color: #000;
   font-size: 28px;
