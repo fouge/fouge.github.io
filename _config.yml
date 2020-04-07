@@ -15,6 +15,8 @@ keep_files:
 
 # Site settings
 title: Cyril Fougeray
+# No more than 155 characters for meta description
+meta_desc: I am a passionate Freelance Embedded Software Engineer, at your service. I build low-power connected devices that are ready to ship.
 subtitle: "Freelance Embedded Software Engineer"
 url: fouge.github.io # the base hostname & protocol for your site
 # baseurl: "/the/subpath/of/your/site" # Set this value to "" if you want your site to be root
