@@ -16,13 +16,13 @@ meta:
 {:toc}
 
 
-## 🧰 Notion, my favorite tool for... everything.
+## 🧰 Notion, my favorite tool.
 
-I discovered Notion about a year ago and I cannot find any better tool to handle most of my digital life in one product. It is flexible so I can use it to track my goals or the habits I want to implement such as reading 2 books a month. I also gather my learnings regarding different subjects or track my savings in the different accounts and apps I am using to have a global view like the percentage in each kind of savings (bonds, stock options, crypto, etc).
+I discovered Notion about a year ago and I cannot find any better tool to handle most of my digital life in one product. It is flexible so I can use it to track my goals or the habits I want to implement such as reading 2 books a month. I also gather my learnings regarding different subjects or track my savings to have a global view; like the percentage in each kind of savings (bonds, stock options, crypto, etc).
 
-My biggest motivation is that I use Notion **and only Notion** for many different things. No more Asana, Trello or Jira, no Evernote, no Google apps (Keep, Tasks, Calendar) for my professional life and most of my personal life as well (even though I would still put an appointment to the hairdresser using Google Assistant).
+My biggest motivation is that I use Notion **and only Notion** for many different things. No more Asana, Trello or Jira, no Evernote, no Google apps (Keep, Tasks, Calendar) for my professional life and most of my personal life as well (even though I would still put an appointment to the hairdresser using Google Assistant 🤫).
 
-In this post, I want to give a brief introduction about how I am using Notion to manage my projects and daily tasks. You can find [a template of my workflow at that page](https://www.notion.so/cyrilfougeray/Template-Project-Management-Freelance-0bc724c96e534823983b4ef39d951460), and duplicate it for your own use if you like it (see the "Duplicate" button on the top right corner?).
+In this post, I want to give a brief introduction about how I am using Notion to manage my projects and daily tasks. You can find [a template of my workflow following the link](https://www.notion.so/cyrilfougeray/Template-Project-Management-Freelance-0bc724c96e534823983b4ef39d951460) and duplicate it for your own use if you like it (see the "Duplicate" button on the top right corner).
 
 ## 🗂 Project management
 
@@ -42,8 +42,8 @@ Here is an example showing the different fields I created to define my customers
 - Address: postal address of the company (probably the headquarters if you want to send an invoice).
 - Founders: it's always better to know the founders behind the company you are working for. My ideal customers are startups so I feel this piece of information is important to me. One could link it to a Notion account changing the field type to "Person". Another great solution I might consider for myself shortly would be to have another table to store Contact information such as e-mail, phone number, etc, and link it directly there. 
 - Employees count: to grasp an idea about the structure.
-- Funding: how do the company is scaling if they intend to?
-- Revenues: nature, amount or anything that can give you an idea about the amount of money the company is dealing with. This field is a text block so you can put any details that you care about.
+- Funding: how is the company scaling, if they intend to?
+- Revenues: nature, amount or anything that can give you an idea about the amount of money the company is dealing with. This field is a text block so you can put any details you care about.
 - Status: I didn't tell you that I also use that table to list prospects. Here I can choose between customers and prospects. Doing this provides 2 different views to filter "customers" and "potential customers", or simply "contacts" if I feel the need to add a third status.
 
 The last two lines are links to the tasks they are involved with and the documents (quotation/invoice) where they are mentioned. Let's dive into how the tasks are handled in my customer project manager.
@@ -63,7 +63,7 @@ I made a few different views to better appreciate the work to be done. The flexi
   <figcaption>Tasks' properties</figcaption>
 </figure>
 
-Let's go through the different fields defining a task. All those fields have a different role and they are all useful to have a clear understanding of the work to be done.
+Let's go through the different fields defining a task. All those fields have a different role and they are all useful to have a clear understanding of the work to be done:
 
 - Status: the simplest way to give a status to a task is to have the three states: "Not started", "In Progress", "Done". In order to work on future quotations, I also added the "Draft" state. Those are tasks I am currently trying to define or that are waiting for customer approval.
 - Customer: that field is taken from the Customer database we created before. It's really easy to find the right customer by typing the first letters when adding the customer.
@@ -97,8 +97,8 @@ Using that logic, I created different views for my usage:
 - Weekly To-Do: you already had the description, all the tasks that are planned to be achieved within the next 7 days. I also display the time to be spent on the task and the exact date I planned it.
 - Work: tasks with an actual customer (not me).
 - Admin: all tasks tagged with "Admin". This view only displays tasks that are not done.
-- Personal Branding: all tasks tagged with "Personal Branding".
-- Prospecting: all tasks tagged "Prospection"
+- Personal Branding: all tasks not completed and tagged with "Personal Branding".
+- Prospecting: all tasks not completed and tagged "Prospection".
 - Calendar: Calendar view. Unfortunately, the view can only display a full month. I would love to be able to change to get the week or even the day. I created the Weekly To-Do mostly because there is no Week view using the Calendar view.
 
 Switching between the views make it easy for me to know which tasks I have to work on and how to prioritize the incoming work.
@@ -127,7 +127,7 @@ To do so, I implemented a third table where I can easily gather all the pieces o
 
 I created a template to fill the new quotation with my info (logo, address, conditions, phase set to "Quotation"). Then, to quickly edit the quotation, I can choose the customer in the list and the address will be automatically updated. Similarly, I have to add tasks taken directly for my tasks and the time planned, time spent as well as the price are all updated whenever a change occurs. The biggest task here will be to write a description for the customer to understand everything included in that quotation. I also have free space under the quotation if more information has to be added.
 
-The document can have several phases: "Quotation", "Approved" (project in the making), "Rejected" (you guessed it), "Invoiced" (Waiting for them to pay), "Paid" (🙏). For the invoice to be generated, I change the "Phase" from "Approved" to "Invoiced". If the tasks have been correctly modified along the way with the time spent, the price will be reflected in the invoice. I then export the page as a PDF and it's ready to be sent to my customer. If you want the customer to access the quotation and tasks, you can also share the page with that customer's Notion account.
+The document can have several phases: "Quotation", "Approved" (project in the making), "Rejected" (you guessed it), "Invoiced" (Waiting for them to pay), "Paid" (🙏). For the invoice to be generated, I change the "Phase" from "Approved" to "Invoiced". If the tasks have been correctly modified along the way with the time spent, the price will be reflected in the invoice. I then export the page as a PDF and it's ready to be sent to my customer. If you want the customer to access the quotation and tasks, you could also share the page with that customer's Notion account (hopefully your customer has an account 😉).
 
 ### Financial reports
 
