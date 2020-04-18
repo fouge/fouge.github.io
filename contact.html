@@ -4,8 +4,52 @@ title: Cyril Fougeray - Contact
 permalink: /contact/
 ---
 
-<script src="/js/contact_me.js"></script>
-<script src="{{ "/js/jqBootstrapValidation.js" | prepend: site.baseurl }}"></script>
+<script>
+  window.addEventListener("DOMContentLoaded", function() {
+
+    // get the form elements defined in your form HTML above
+    
+    var form = document.getElementById("contactForm");
+    var button = document.getElementById("my-form-button");
+    var status = document.getElementById("my-form-status");
+
+    // Success and Error functions for after the form is submitted
+    
+    function success() {
+      form.reset();
+      status.innerHTML = "✅ Thank you for your message, I will respond shortly!";
+    }
+
+    function error() {
+      button.innerHTML = "❌ Oops! There was a problem. No worries, here are other ways to contact me 👇";
+    }
+
+    // handle the form submission event
+
+    form.addEventListener("submit", function(ev) {
+      ev.preventDefault();
+      var data = new FormData(form);
+      ajax(form.method, form.action, data, success, error);
+    });
+  });
+  
+  // helper function for sending an AJAX request
+
+  function ajax(method, url, data, success, error) {
+    var xhr = new XMLHttpRequest();
+    xhr.open(method, url);
+    xhr.setRequestHeader("Accept", "application/json");
+    xhr.onreadystatechange = function() {
+      if (xhr.readyState !== XMLHttpRequest.DONE) return;
+      if (xhr.status === 200) {
+        success(xhr.response, xhr.responseType);
+      } else {
+        error(xhr.status, xhr.response, xhr.responseType);
+      }
+    };
+    xhr.send(data);
+  }
+</script>
 
 <!-- Slider Start -->
 <section id="global-header">
@@ -24,43 +68,40 @@ permalink: /contact/
 <section id="contact-form">
   <div class="container">
     <div class="row">
-      <div class="col-md-6 col-sm-12">
-        <div class="block">
-          <form name="sentMessage" id="contactForm" novalidate>
+      <div class="block">
+        <form name="sentMessage" action="https://formspree.io/xyydqzgo" method="POST" id="contactForm" novalidate>
+          <div class="col-md-6 col-sm-12">
             <div class="form-group">
-              <input type="text" class="form-control" placeholder="Your Name" id="name" required data-validation-required-message="Please enter your name.">
+              <input type="text" class="form-control" placeholder="Your Name" id="name" required data-validation-required-message="Please enter your name." name="name">
             </div>
             <div class="form-group">
-              <input type="email" class="form-control" placeholder="Email Address" id="email">
+              <input type="email" class="form-control" placeholder="Your E-Mail Address" id="email" name="_replyto">
             </div>
             <div class="form-group">
-              <input type="tel" class="form-control" placeholder="Your Phone" id="phone">
+              <input type="tel" class="form-control" placeholder="Your Phone Number" id="phone" name="phone">
             </div>
-          </form>
-        </div>
-      </div>
-      <div class="col-md-6 col-sm-12">
-        <div class="block">
-          <form>
+          </div>
+          <div class="col-md-6 col-sm-12">
             <div class="form-group-2">
-              <textarea class="form-control" rows="4" placeholder="Your Message" id="message"></textarea>
+              <textarea class="form-control" rows="3" placeholder="✍️ Your Message" id="message" name="message"></textarea>
             </div>
-            <div id="success"></div>
-            <button class="btn btn-default" type="submit">Send Message</button>
-          </form>
-        </div>
+            <button class="btn btn-default" id="my-form-button" type="submit" value="Send" target="_blank">Send Message</button>
+          </div>
+        </form>
       </div>
     </div>
+
+    <div>
+      <h4 id="my-form-status">☝️ You can fill that form.</h4>
+    </div>
+
     <div id="contact-box" class="row">
       <div class="col-md-6 col-sm-12">
         <div class="block">
           <h2>Don't hesitate!</h2>
           <ul class="address-block">
             <li>
-              <i class="fa fa-map-marker"></i>Nantes
-            </li>
-            <li>
-              <i class="fa fa-envelope-o"></i>cyril.fougeray@gmail.com
+              <i class="fa fa-map-marker"></i>France
             </li>
             <li>
               <i class="fa fa-phone"></i>+33 6 89 11 75 14
@@ -83,5 +124,6 @@ permalink: /contact/
           </ul>
         </div>
       </div>
+    </div>
   </div>
 </section>
