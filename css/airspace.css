@@ -74,6 +74,7 @@ figcaption {
 	Header Start
 --*/
 header {
+  font-family: 'Roboto', sans-serif;
   background: #fff;
   padding: 20px 0;
 }
@@ -207,11 +208,6 @@ font header .navbar-default .navbar-nav li a:hover {
   margin: 0;
   font-size: 14px;
   line-height: 1.8;
-}
-#service .btn-view-works {
-  background: #655E7A;
-  color: #fff;
-  padding: 10px 20px;
 }
 #service p {
   color: #7B7B7B;
@@ -419,7 +415,15 @@ font header .navbar-default .navbar-nav li a:hover {
 
 
 #blogpost h1 {
+    background: linear-gradient(to right, #6666ff, #66d9ff) no-repeat;
+    color: var(#FFFFFF);
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -o-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
+
 #blogpost h2{
   padding-top: 20px;
 }
