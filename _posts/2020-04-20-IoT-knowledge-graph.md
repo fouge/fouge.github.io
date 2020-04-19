@@ -18,7 +18,7 @@ Interact with it!
 - shift-click on a node to change its title
 - click on node or edge and press backspace/delete to delete
 
-<iframe sandbox="allow-popups allow-scripts allow-forms allow-same-origin allow-modals" src="/iot_knowledge_graph.html" marginwidth="0" marginheight="0" style="height:500px; width: 100%" scrolling="no">
+<iframe sandbox="allow-popups allow-scripts allow-forms allow-same-origin allow-modals" src="/iot_knowledge_graph.html" marginwidth="0" marginheight="0" style="height:600px; width: 100%" scrolling="no">
 </iframe>
 
 
