@@ -429,8 +429,29 @@ document.onload = (function(d3, saveAs, Blob, undefined){
       state.justScaleTransGraph = false;
     } else if (state.graphMouseDown && d3.event.shiftKey){
       // clicked not dragged from svg
+      var new_id = 0;
+
+      var ids = thisGraph.nodes.map(function(item) {
+        return item.id;
+      });
+
+      console.log("Used IDs: " + ids);
+
+      // New ID is idct (ID count) if there is no hole in the IDs
+      // Check if we can use an non-used ID from 1 to idct
+      var new_id = thisGraph.idct;
+      for (const x of Array(thisGraph.idct).keys()) {
+        var id = x + 1;
+        if(!ids.includes(id)) {
+          console.log("ID for new node: " + id);
+          new_id = id;
+        }
+      }
+      console.log("New node: id:" + new_id + " new count: " + thisGraph.idct);
+
       var xycoords = d3.mouse(thisGraph.svgG.node()),
-          d = {id: thisGraph.idct++, title: consts.defaultTitle, x: xycoords[0], y: xycoords[1], color: "#F6FBFF"};
+      d = {id: new_id, title: consts.defaultTitle, x: xycoords[0], y: xycoords[1], color: "#F6FBFF"};
+      thisGraph.idct++;
       thisGraph.nodes.push(d);
       thisGraph.updateGraph();
       // make title of text immediently editable
@@ -467,6 +488,8 @@ document.onload = (function(d3, saveAs, Blob, undefined){
       if (selectedNode){
         thisGraph.nodes.splice(thisGraph.nodes.indexOf(selectedNode), 1);
         thisGraph.spliceLinksForNode(selectedNode);
+        thisGraph.idct--;
+        console.log("Removed node: id:" + selectedNode.id + ", new count: " + thisGraph.idct);
         state.selectedNode = null;
         thisGraph.updateGraph();
       } else if (selectedEdge){
