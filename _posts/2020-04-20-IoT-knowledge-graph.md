@@ -28,14 +28,12 @@ I took a pen and paper and tried to list sub-domains defining my value propositi
 
 ### What makes the IoT?
 
-The graph is a set of domains and sub-domains I think are together making the Internet of Things. Even if it may seem like the graph gives the whole picture of my work, it's not that close. For example, my main tool being a computer, I don't specify here that I work on a Linux-based OS or that I prefer this tool over that one. To me, here are the main sub-domains of IoT. Moreover, sensors, stream-processing, OSes and communication are all feeding another domain called Information Theory which I didn't mention here to keep things simple, as it deserves its own graph.
-
-Let me give you my explanation of the IoT sub-domains:
+The graph is a set of domains and sub-domains I think are together making the Internet of Things. Nodes could be added or reorganized while several of them can also be the root of a new graph. The science of quantification, storage and communication of information called _Information Theory_ is for example made of Sensors, Stream-Processing and Communication. Possibilities are infinite so let me give you _my_ explanation of the IoT sub-domains:
 
 - Electronics: the hardware part; Analog and Digital Electronics. To me, an area I need to develop, I would love to be able to design circuit boards from scratch. 
 - Sensors: Part of the electronic bubble in the case of IoT, the sensors. Many are really easy to implement as they are using standards to communicate. The quality of the measurement is probably the most important part of that area. Then is the interpretation.
-- Stream-Processing: Now that we have raw measurement data, Digital Signal Processing algorithms and FPGAs (which can be linked to Electronics) will bring the insights to actually make use of the data. The hardware is an important part with some processor handling Floating-Point instructions while others are not; From a developer standpoint, the programming language should also be considered: functional reactive programming is made for data streams. [I am currently transiting algorithms from C to Rust](https://interrupt.memfault.com/blog/rust-for-digital-signal-processing).
-- OS/SDK: the basis of embedded software. Real-Time OSes (RTOS) are mostly used for low-power devices if not barebone (without OS). Software Development Kit (libraries and examples) too are providing a skeleton, and some are excellent. From my experience, I would mention the nRF5-SDK from Nordic or the ESP-IDF from Espressif. Both bring an RTOS implementation (FreeRTOS and Zephyr). The build set up is also provided even if one could change to its preferences, mine being Make but as I use CLion, I may build my next projects with CMake.
+- Stream-Processing: Now that we have raw measurement data, Digital Signal Processing algorithms and FPGAs (_ie_ configurable electronic circuits) will bring the insights to actually make use of the data. The hardware is an important part with some processor handling Floating-Point computation natively while others are not; From a developer standpoint, the programming language should also be considered: functional reactive programming is made for data streams. [I am currently porting algorithms from C to Rust](https://interrupt.memfault.com/blog/rust-for-digital-signal-processing).
+- OS/SDK: the basis of embedded software. Real-Time OSes (RTOS) are mostly used for low-power devices if not barebone (without OS). Software Development Kit (libraries and examples) too are providing a skeleton, and some are excellent. From my experience, I would mention the nRF5-SDK from Nordic or the ESP-IDF from Espressif. Both bring an RTOS implementation (FreeRTOS and Zephyr). The build set up is also provided even if one could change to its preferences.
 - Communication: Now that we have data to transmit from the sensors and the processing algorithms, we need to transmit it. Communication can be separated into two sub-domains: short and long-range communication. You all know the difference based on your smartphone's ability to communicate using 4G (Long-Range) and WiFi or Bluetooth (Short-Range).
 - API: Once the data is sent to servers to be stored, users will want to fetch that data at some points using an API _ie_ entry points to the backend. Most of them are using a REST API while we increasingly see different types of backends: Distributed Applications (DApps) based on Ethereum or IOTA are able to handle data transactions. More and more DApps will appear in the near future.
 - Analytics: Another field of application based on IoT is to use big chunks of data to find insights that are worth considering. I don't know that area but we all have heard of Artificial Intelligence powered by tons of data to make the system learn, which can then be used in real-time (stream-processing).
@@ -45,14 +43,14 @@ Let me give you my explanation of the IoT sub-domains:
 
 ### What makes me?
 
-After more than 5 years of building connected devices, I learned a lot. Freelancing is now giving me the opportunity to learn even more, in areas I didn't get the chance to work on.
+After more than 5 years of building connected devices, I learned a lot. Freelancing is now allowing me to learn even more, in areas I didn't get the chance to work on.
 
 I colored the nodes differently based on what they are to me:
 
 - 💚 Ask me anything about it, I can respond to you. 
 - 💙 I have backgrounds without being a complete expert. Ask me if you have projects involving those, I would be pleased to help! 🤓
 - 💛 I want to know more! I dedicate one day a week at making those yellow circles green. Please tell me you have a project for me!
-- ☑️ I won't dive into those in the near future. There are many others that I didn't write here. Internet of Things can be a huge playground, I don't wont to get lost.
+- ☑️ I won't dive into those in the near future. There are many others that I didn't write here. Internet of Things can be a huge playground, I don't want to get lost.
 
 In my quest to defining me as a unique person, making that graph gave me a better understanding of what I am capable of, and where I am willing to make progress. But that's not it.
 
@@ -67,6 +65,7 @@ If you are reading those lines, it means you are probably familiar with the IoT.
 You can now play with the graph 🤹‍♂️:
 - Make it your own
 - Improve it: I would love to build a better graph thanks to you.
+- If you want to start from scrath, head to [the page where I found the source code](https://bl.ocks.org/cjrd/6863459).
 
 You can add sub-domains that are missing or re-organize the nodes so that I can grasp your understanding of the IoT. Then, download the graph (JSON file) and send it to me through [LinkedIn](https://www.linkedin.com/in/cyrilfougeray/) or [Twitter](https://twitter.com/cyrilfougeray). I will post your contributions to the article directly. 
 
