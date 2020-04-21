@@ -634,7 +634,7 @@ document.onload = (function(d3, saveAs, Blob, undefined){
   graph.setIdCt(2);
   graph.updateGraph();
 
-  d3.json("iot_knowledge_graph_dag.json", function(json) {
+  d3.json("/ressources/iot_knowledge_graph_dag.json", function(json) {
     console.log(json); // this will show the info it in firebug console
     nodes = json.nodes;
     edges = json.edges;

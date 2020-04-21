@@ -79,7 +79,7 @@ You can add sub-domains that are missing or re-organize the nodes so that I can 
 - click on node or edge and press backspace/delete to delete
 ```
 
-<iframe sandbox="allow-popups allow-scripts allow-forms allow-same-origin allow-modals" src="/iot_knowledge_graph.html" marginwidth="0" marginheight="0" style="height:600px; width: 100%" scrolling="no">
+<iframe sandbox="allow-popups allow-scripts allow-forms allow-same-origin allow-modals" src="/ressources/iot_knowledge_graph.html" marginwidth="0" marginheight="0" style="height:600px; width: 100%" scrolling="no">
 </iframe>
 
 
