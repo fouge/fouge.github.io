@@ -1,7 +1,7 @@
 ---
 layout: post
-title: I am building a blockchain - Part 1
-description: The best way to learn more about blockchain technologies is to build a blockchain.
+title: If you want to know more about blockchains, build one.
+description: Learning by doing. Why did I choose the Substrate framework to learn more about blockchain technologies?
 date: 2020-05-04
 author: Cyril
 meta: 
