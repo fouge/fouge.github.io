@@ -40,7 +40,24 @@
 <script>
     window.onload = function() {
         twitter_share.href = 'https://twitter.com/share?url='+ encodeURIComponent(location.href) + '&amp;text="{{ page.title }}"%20by%20@cyrilfougeray'
+        linkedin_share.href = 'https://www.linkedin.com/shareArticle?url=cyrilfougeray.com' + window.location.pathname
     }
+
+    // is Web Share API supported?
+    if ( navigator.share ) {
+        // share button click handler
+        document.getElementById('share_btn').addEventListener('click', () => {
+
+        // share page information
+        navigator.share({
+            url: 'https://example.com/',
+            title: 'My example page',
+            text: 'An example page implementing the Web Share API.'
+        });
+    });
+
+}
+
 </script>
 
 <!--
