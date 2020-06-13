@@ -39,7 +39,7 @@
 
 <script>
     window.onload = function() {
-        twitter_share.href = 'https://twitter.com/share?url='+ encodeURIComponent(location.href) + '&amp;text="{{ page.title }}"%20by%20@cyrilfougeray'
+        twitter_share.href = 'https://twitter.com/share?text="{{ page.title }}"%20by%20@cyrilfougeray%20' + encodeURIComponent(location.href) + ''
         linkedin_share.href = 'https://www.linkedin.com/shareArticle?url=cyrilfougeray.com' + window.location.pathname
     }
 
