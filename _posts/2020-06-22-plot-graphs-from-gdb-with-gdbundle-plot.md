@@ -10,7 +10,7 @@ meta:
 - debugging
 ---
 
-As a freelance, I have the chance to work on different parts of embedded projects and during the last few weeks, I have been focused on [Digital Signal Processing algorithms written in Rust](https://interrupt.memfault.com/blog/rust-for-digital-signal-processing). As I had to debug my library, I wanted to plot the signal I am working on and its various transformations to see how my algorithm is behaving on the incomming data. When debugging DSP algorithms, this is a repetitive task so I rapidly realized that I needed a script to quickly display the data.
+As a freelance, I have the chance to work on different parts of embedded projects and during the last few weeks, I have been focused on [Digital Signal Processing algorithms written in Rust](https://interrupt.memfault.com/blog/rust-for-digital-signal-processing). As I had to debug my library, I wanted to plot the signal I am working on and its various transformations to see how my algorithm is behaving on the incoming data. When debugging DSP algorithms, this is a repetitive task so I rapidly realized that I needed a script to quickly display the data.
 
 ## GDBundle
 
@@ -33,7 +33,7 @@ The specifications for that plugin are my own: plotting arrays coming from Rust 
 
 I focused my work on GDB instead of LLDB and started modifying the renamed file `plot_gdb.py`.
 
-The GDB API makes it easy to retrieve a variable using its function `parse_and_eval`. This function returns an object containing the variable type. The script inspects the type in order to parse correctly the value. If the variable is a reference to an array, the value is dereferenced to access the actual values in the array. So far, I added support for slices declared with the Rust numeric types such a `f32`, `i32`, etc.
+The GDB API makes it easy to retrieve a variable using its function `parse_and_eval`. This function returns an object containing the variable type. The script inspects the type in order to parse correctly the value. If the variable is a reference to an array, the value is dereferenced to access the actual values in the array. So far, I added support for slices declared with the Rust numeric types such an `f32`, `i32`, etc.
 
 Another consideration was to make the script run without blocking GDB for too long. As one might want to stay on the figure for a while to inspect it, I had to use `multiprocessing` and spawn a new process to show the figure.
 
@@ -59,7 +59,7 @@ Here is a screencast for you to watch on one of my projects:
 There are many improvements possible for that plugin. Here are the main ones I would like to improve:
 
 - Collections are currently not supported. I mostly work on embedded devices that don't have support for collections (`no-std`), but I use Rust programs running on my machine to test and debug my libraries quickly and I make use of the `Vector` or `HashMap` sometimes. I am pretty sure my plugin could be able to handle data from vectors.
-- If it's in the readers interest, I would love to have the same level of support for both GDB and LLDB.
+- If it's in the readers' interest, I would love to have the same level of support for both GDB and LLDB.
 
 ## Conclusion
 
