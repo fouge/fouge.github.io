@@ -14,9 +14,9 @@ With the evolutions brought on the same products, I am now about to release in p
 
 ## Panic!
 
-As you might already know, Rust forces you to write a panic handler which is great to make use of the trace when errors are occuring. When I started developing a Rust library launched from embedded C code, without the standard library (`no-std`), I chose a [common panic behavior](https://rust-embedded.github.io/book/start/panicking.html) from a crate I had added to my `Cargo.toml`. As too often, the panic handler would reset the target without doing anything with the error.
+As you might already know, Rust forces you to write a panic handler which is great to make use of the trace when errors are occurring. When I started developing a Rust library launched from embedded C code, without the standard library (`no-std`), I chose a [common panic behavior](https://rust-embedded.github.io/book/start/panicking.html) from a crate I had added to my `Cargo.toml`. As too often, the panic handler would reset the target without doing anything with the error.
 
-Now that things are getting serious and to make my library production-ready, I needed to redefine my panic handler to make use of errors occuring on the target. So I created a really simple but useful crate.
+Now that things are getting serious and to make my library production-ready, I needed to redefine my panic handler to make use of errors occurring on the target. So I created a really simple but useful crate.
 
 Firstly, the panic handler has this signature: 
 
@@ -87,7 +87,7 @@ efgEFG
 
 It confirms my thoughts: the messages are hardcoded inside my program.
 
-It also confirm that if I want to sent a short error code, I'll have to parse the payload to get the meaning of the error and associate each different error with a code. For example, if it contains `"out of bounds"`, I will send the error code `0x01` and I will keep a table with all the relations I created.
+It also confirms that if I want to send a short error code, I'll have to parse the payload to get the meaning of the error and associate each different error with a an error code. For example, if it contains `"out of bounds"`, I will send the error code `0x01` and I will keep a table with all the relations I created.
 
 ## Optimizations
 
@@ -113,10 +113,10 @@ It is actually a great way to check the errors that could be prevented from happ
 
 My crate is now ready! I have to add it to any embedded Rust library that will be created for those few products as they all implement `app_error_fault_handler_release`. 
 
-This step was a must before launching that next firmware to the few thousands customers and it gave me the occasion to share a bit more about the stuff I am working on.
+This step was a must before launching that next firmware to the few thousand customers and it gave me the occasion to share a bit more about the stuff I am working on.
 
 ---
 
-Please let me know if you have tips to make an even better use of the errors. If you know how to optimize the file name as well, I'll take it.
+Please let me know if you have tips to make even better use of the errors. If you know how to optimize the file name as well, I'll take it.
 
 Stay safe 👋
