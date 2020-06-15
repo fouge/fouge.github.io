@@ -12,6 +12,10 @@ A few years ago [I added a mechanism](https://medium.com/equisense/quality-assur
 
 With the evolutions brought on the same products, I am now about to release in production my first library written in Rust 🙌. But before doing the big jump, I needed to log errors happening when executing the library. Yes, there are errors sometimes... even when using Rust 😉.
 
+<figure class="col-md-12">
+  <img src="/img/posts/panic_rust/panics.svg" alt="Ferris the crab panicking" class="img-responsive" style="height:250px">
+</figure>
+
 ## Panic!
 
 As you might already know, Rust forces you to write a panic handler which is great to make use of the trace when errors are occurring. When I started developing a Rust library launched from embedded C code, without the standard library (`no-std`), I chose a [common panic behavior](https://rust-embedded.github.io/book/start/panicking.html) from a crate I had added to my `Cargo.toml`. As too often, the panic handler would reset the target without doing anything with the error.
