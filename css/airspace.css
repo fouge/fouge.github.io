@@ -417,6 +417,9 @@ font header .navbar-default .navbar-nav li a:hover {
   padding: 10px 20px;
 }
 
+#blogpost {
+  padding-top: 100px;
+}
 
 #blogpost h1 {
     background: linear-gradient(to right, #6666ff, #66d9ff) no-repeat;
