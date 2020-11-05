@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Continous Delivery for Firmware updates.
+title: Continuous Delivery for Firmware updates.
 description: Building and releasing Firmware to the customer is easy when you use the right tools.
 date: 2020-10-03
 author: Cyril
