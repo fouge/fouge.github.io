@@ -5,7 +5,12 @@ description: Making use of the Rust panic handler on any embedded target. Learn 
 date: 2020-06-15
 author: Cyril
 meta: 
-- rust
+  - tag:
+    title: rust
+    class: optimized
+  - tag:
+    title: debug
+    class: optimized
 ---
 
 A few years ago [I added a mechanism](https://medium.com/equisense/quality-assurance-for-firmware-production-monitoring-68cd5fcf038d) to track HardFaults, failing asserts or any error happening on the products I have been developing. This way, I was able to track down bugs in production which is not an obvious task otherwise, because extensive testing is not obvious. It made me realize the many bugs that are not even noticed by the users and how better I could do to have a stable firmware. 

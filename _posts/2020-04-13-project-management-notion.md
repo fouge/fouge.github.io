@@ -5,8 +5,9 @@ description: Find out how I am using Notion to automate the creation of quotatio
 date: 2020-04-13
 author: Cyril
 meta: 
-- work
-- management
+  - tag:
+    title: automate
+    class: delivered
 ---
 
 {:.no_toc}
@@ -15,8 +16,7 @@ meta:
 * auto-gen TOC:
 {:toc}
 
-
-## 🧰 Notion, my favorite tool.
+## 🧰 Notion, my favorite tool
 
 I discovered Notion about a year ago and I cannot find any better tool to handle most of my digital life in one product. It is flexible so I can use it to track my goals or the habits I want to implement such as reading 2 books a month. I also gather my learnings regarding different subjects or track my savings to have a global view; like the percentage in each kind of savings (bonds, stock options, crypto, etc).
 
@@ -39,12 +39,12 @@ My activity is centered around the customers. I created a table to list all of t
 
 Here is an example showing the different fields I created to define my customers. You should add or remove some if you would like. The address is used in other tables but all the other fields are purely informational.
 
-- Address: postal address of the company (probably the headquarters if you want to send an invoice).
-- Founders: it's always better to know the founders behind the company you are working for. My ideal customers are startups so I feel this piece of information is important to me. One could link it to a Notion account changing the field type to "Person". Another great solution I might consider for myself shortly would be to have another table to store Contact information such as e-mail, phone number, etc, and link it directly there. 
-- Employees count: to grasp an idea about the structure.
-- Funding: how is the company scaling, if they intend to?
-- Revenues: nature, amount or anything that can give you an idea about the amount of money the company is dealing with. This field is a text block so you can put any details you care about.
-- Status: I didn't tell you that I also use that table to list prospects. Here I can choose between customers and prospects. Doing this provides 2 different views to filter "customers" and "potential customers", or simply "contacts" if I feel the need to add a third status.
+* Address: postal address of the company (probably the headquarters if you want to send an invoice).
+* Founders: it's always better to know the founders behind the company you are working for. My ideal customers are startups so I feel this piece of information is important to me. One could link it to a Notion account changing the field type to "Person". Another great solution I might consider for myself shortly would be to have another table to store Contact information such as e-mail, phone number, etc, and link it directly there. 
+* Employees count: to grasp an idea about the structure.
+* Funding: how is the company scaling, if they intend to?
+* Revenues: nature, amount or anything that can give you an idea about the amount of money the company is dealing with. This field is a text block so you can put any details you care about.
+* Status: I didn't tell you that I also use that table to list prospects. Here I can choose between customers and prospects. Doing this provides 2 different views to filter "customers" and "potential customers", or simply "contacts" if I feel the need to add a third status.
 
 The last two lines are links to the tasks they are involved with and the documents (quotation/invoice) where they are mentioned. Let's dive into how the tasks are handled in my customer project manager.
 
@@ -65,16 +65,16 @@ I made a few different views to better appreciate the work to be done. The flexi
 
 Let's go through the different fields defining a task. All those fields have a different role and they are all useful to have a clear understanding of the work to be done:
 
-- Status: the simplest way to give a status to a task is to have the three states: "Not started", "In Progress", "Done". In order to work on future quotations, I also added the "Draft" state. Those are tasks I am currently trying to define or that are waiting for customer approval.
-- Customer: that field is taken from the Customer database we created before. It's really easy to find the right customer by typing the first letters when adding the customer.
-- Tags: At the moment, I use tags only for the tasks I attribute to myself. Those tags are "Admin" for administrative tasks, "Personal Branding" where tagged tasks can be "modifying the website" or "working on a better SEO". The last one is "Prospection" for tasks relative to talking to future customers, meeting people, etc.
-- Date: it's important to plan and set deadlines. The date field in Notion can have a start and end date, as well as time during the day, making it perfect for time tracking.
-- Day pricing: as you guess, how much do I make my customer pay on a daily basis for my time spent on that task. 
-- Planned time: number of days planned to achieve the task. It can be a floating-point if only a few hours. To me, one day is 8 hours.
-- Planned price: for that field, a formula is being used: `day pricing * planned time`. No need for the user to fill it. 
-- Time spent: time effectively spent on the task. I make my customers pay the price if I spend more or less time on the task.
-- Full price: price to pay. Same as "Planned price", this field is automatically updated.
-- Quotation/Invoice: link to the quotation or invoice, depending on the status of the document at that point. Read on to see how those documents are generated in my workflow.
+* Status: the simplest way to give a status to a task is to have the three states: "Not started", "In Progress", "Done". In order to work on future quotations, I also added the "Draft" state. Those are tasks I am currently trying to define or that are waiting for customer approval.
+* Customer: that field is taken from the Customer database we created before. It's really easy to find the right customer by typing the first letters when adding the customer.
+* Tags: At the moment, I use tags only for the tasks I attribute to myself. Those tags are "Admin" for administrative tasks, "Personal Branding" where tagged tasks can be "modifying the website" or "working on a better SEO". The last one is "Prospection" for tasks relative to talking to future customers, meeting people, etc.
+* Date: it's important to plan and set deadlines. The date field in Notion can have a start and end date, as well as time during the day, making it perfect for time tracking.
+* Day pricing: as you guess, how much do I make my customer pay on a daily basis for my time spent on that task. 
+* Planned time: number of days planned to achieve the task. It can be a floating-point if only a few hours. To me, one day is 8 hours.
+* Planned price: for that field, a formula is being used: `day pricing * planned time`. No need for the user to fill it. 
+* Time spent: time effectively spent on the task. I make my customers pay the price if I spend more or less time on the task.
+* Full price: price to pay. Same as "Planned price", this field is automatically updated.
+* Quotation/Invoice: link to the quotation or invoice, depending on the status of the document at that point. Read on to see how those documents are generated in my workflow.
 
 Notion lets you create templates to add lines with pre-filled data. I created one for my biggest customers so that the company and daily price is filled in advance but also for the tasks I attribute to myself.
 
@@ -93,13 +93,13 @@ As an example, let's say I want to view all the tasks I have to accomplish durin
 
 Using that logic, I created different views for my usage:
 
-- All: all the tasks, in a Kanban view. If at any point I have too many tasks, I may choose to display them in a table or a list.
-- Weekly To-Do: you already had the description, all the tasks that are planned to be achieved within the next 7 days. I also display the time to be spent on the task and the exact date I planned it.
-- Work: tasks with an actual customer (not me).
-- Admin: all tasks tagged with "Admin". This view only displays tasks that are not done.
-- Personal Branding: all tasks not completed and tagged with "Personal Branding".
-- Prospecting: all tasks not completed and tagged "Prospection".
-- Calendar: Calendar view. Unfortunately, the view can only display a full month. I would love to be able to change to get the week or even the day. I created the Weekly To-Do mostly because there is no Week view using the Calendar view.
+* All: all the tasks, in a Kanban view. If at any point I have too many tasks, I may choose to display them in a table or a list.
+* Weekly To-Do: you already had the description, all the tasks that are planned to be achieved within the next 7 days. I also display the time to be spent on the task and the exact date I planned it.
+* Work: tasks with an actual customer (not me).
+* Admin: all tasks tagged with "Admin". This view only displays tasks that are not done.
+* Personal Branding: all tasks not completed and tagged with "Personal Branding".
+* Prospecting: all tasks not completed and tagged "Prospection".
+* Calendar: Calendar view. Unfortunately, the view can only display a full month. I would love to be able to change to get the week or even the day. I created the Weekly To-Do mostly because there is no Week view using the Calendar view.
 
 Switching between the views make it easy for me to know which tasks I have to work on and how to prioritize the incoming work.
 
@@ -142,11 +142,11 @@ Helped with views, I can quickly get reports about the financial health of my fr
 
 As you can see, I created a few views:
 
-- Full: all the quotations and invoices ever created.
-- Waiting for approval: quotations sent so far but never approved.
-- Time tracking: here the goal is to compare planned time vs spent time globally. Am I good at planning? I think it's a good KPI to follow.
-- Q2 2020: a view for my revenues in Q2 2020. Notion can also compute the sum of a column to see how much cash I earned during that particular quarter. 
-- All: a simple view with all my revenues so far.
+* Full: all the quotations and invoices ever created.
+* Waiting for approval: quotations sent so far but never approved.
+* Time tracking: here the goal is to compare planned time vs spent time globally. Am I good at planning? I think it's a good KPI to follow.
+* Q2 2020: a view for my revenues in Q2 2020. Notion can also compute the sum of a column to see how much cash I earned during that particular quarter. 
+* All: a simple view with all my revenues so far.
 
 Revenues can then be easily monitored and declared every quarter in my case. Taxes are not included in any table but that can be the next step to a better accounting dashboard in Notion.
 

@@ -417,6 +417,43 @@ font header .navbar-default .navbar-nav li a:hover {
   padding: 10px 20px;
 }
 
+.learn {
+  background-color:#F1948A;
+  border-radius: 12px; 
+  padding:4px; 
+  margin-right: 5px;
+}
+
+.connected {
+  background-color:#5DADE2;
+  border-radius: 12px; 
+  padding:4px; 
+  margin-right: 5px;
+}
+
+.smart {
+  background-color:#82E0AA;
+  border-radius: 12px; 
+  padding:4px; 
+  margin-right: 5px;
+}
+
+.optimized {
+  background-color:#F4D03F;
+  border-radius: 12px; 
+  padding:4px; 
+  margin-right: 5px;
+}
+
+.delivered {
+  background-color:#BB8FCE;
+  border-radius: 12px; 
+  padding:4px; 
+  margin-right: 5px;
+}
+
+
+
 #blogpost {
   padding-top: 100px;
 }

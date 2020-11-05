@@ -5,8 +5,18 @@ description: Discover all the technical fields behind the Internet of Things. Wh
 date: 2020-04-20
 author: Cyril
 meta: 
-- freelancing
-- IoT
+  - tag:
+    title: connected
+    class: connected
+  - tag:
+    title: smart
+    class: smart
+  - tag:
+    title: optimized
+    class: optimized
+  - tag:
+    title: delivered
+    class: delivered
 ---
 
 ## The Blue Ocean strategy

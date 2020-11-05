@@ -5,7 +5,9 @@ description: Learning by doing. Why did I choose the Substrate framework to lear
 date: 2020-05-04
 author: Cyril
 meta: 
-- blockchain
+  - meta1:
+    title: learn
+    class: learn
 ---
 
 Following [my last post](https://www.cyrilfougeray.com/2020/04/20/IoT-knowledge-graph.html) regarding where I am heading in my professional career, I said I wanted to learn more about blockchains, and now I am telling you I am building a blockchain. 

@@ -20,7 +20,12 @@ permalink: /blog/
 {% for post in site.posts %}
 <div class="post-area">
   <a href="{{ post.url | prepend: site.baseurl }}" class="bold">{{ post.title }}</a>
-  <p class="post-date">{{ post.date | date_to_long_string }} - <i> {{ post.meta | array_to_sentence_string }} </i></p>
+  <p class="post-date">{{ post.date | date_to_long_string }} - 
+    
+    {% for tag in post.meta %}
+    <i class="{{ tag.class }}"> {{ tag.title }} </i>
+    {% endfor %}
+  </p>
   <p>
     {{ post.description }}
   </p>

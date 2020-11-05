@@ -1,13 +1,19 @@
 ---
 layout: post
-title: Plot graphs from GDB with gdbunble-plot
+title: Plot graphs from GDB with gdbunble-plot.
 description: Boost GDB with an easy-to-install plugin that will allow you to plot variables into graphs from GDB's command-line. 
 date: 2020-06-22
 author: Cyril
-meta: 
-- rust
-- DSP
-- debugging
+meta:
+  - tag:
+    title: rust
+    class: optimized 
+  - tag:
+    title: debug
+    class: optimized
+  - tag:
+    title: DSP
+    class: smart
 ---
 
 As a freelance, I have the chance to work on different parts of embedded projects and during the last few weeks, I have been focused on [Digital Signal Processing algorithms written in Rust](https://interrupt.memfault.com/blog/rust-for-digital-signal-processing). As I had to debug my library, I wanted to plot the signal I am working on and its various transformations to see how my algorithm is behaving on the incoming data. When debugging DSP algorithms, this is a repetitive task so I rapidly realized that I needed a script to quickly display the data.
@@ -16,7 +22,6 @@ As a freelance, I have the chance to work on different parts of embedded project
   <img src="/img/posts/gdbundle_plot/gdb-logo.svg.png" alt="Matplotlib graph" class="img-responsive">
   <figcaption>Did you know that this fish is <a href="https://www.gnu.org/software/gdb/mascot/">the mascot of GDB</a>? I did not.</figcaption>
 </figure>
-
 
 ## GDBundle
 

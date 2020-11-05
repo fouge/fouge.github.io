@@ -1,12 +1,13 @@
 ---
 layout: post
-title: Continous Delivery for Firmware updates
+title: Continous Delivery for Firmware updates.
 description: Building and releasing Firmware to the customer is easy when you use the right tools.
 date: 2020-10-03
 author: Cyril
 meta: 
-- firmware
-- ci/cd
+  - tag:
+    title: CI/CD
+    class: delivered
 ---
 
 This post has been previously [posted on Medium on January 2019](https://medium.com/equisense/firmware-quality-assurance-continuous-delivery-125884194ea5). It has since been updated and incremented.

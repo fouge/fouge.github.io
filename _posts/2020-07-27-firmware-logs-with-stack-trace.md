@@ -1,12 +1,13 @@
 ---
 layout: post
-title: Boost your beautiful log messages with instant crash analysis
+title: Boost your beautiful log messages with instant crash analysis.
 description: A stack trace for embedded software. Get all the information you need to debug firmware crashes right into your logs, in a few easy steps. 
 date: 2020-07-27
 author: Cyril
 meta: 
-- firmware
-- debugging
+  - tag:
+    title: debug
+    class: optimized
 ---
 
 Having a logger display execution information on the terminal is pretty common for Firmware developers. What's a bit less common is having a stack trace when the program crashes.
