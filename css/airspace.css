@@ -27,7 +27,7 @@ h6 {
 }
 h2 {
   font-size: 30px;
-  font-weight: 400;
+  font-weight: 300;
 }
 h3 {
   font-size: 28px;
@@ -55,7 +55,7 @@ a:active {
 .section-title h2 {
   text-transform: uppercase;
   font-size: 28px;
-  font-weight: 600;
+  font-weight: 400;
 }
 .section-title p {
   font-family: 'Volkhov', serif;
@@ -115,7 +115,7 @@ font header .navbar-default .navbar-nav li a:hover {
 	Slider Start
 --*/
 #slider {
-  background: linear-gradient(to bottom right, #6666ff, #4dff4d) no-repeat;
+  background: linear-gradient(to bottom right, #5dade2, #BB8FCE) no-repeat;
   background-size: cover;
   background-attachment: fixed;
   background-position: 10% 0%;
@@ -216,6 +216,13 @@ font header .navbar-default .navbar-nav li a:hover {
 #service p {
   color: #7B7B7B;
 }
+#service .btn-view-works {
+  background:  linear-gradient(to right, #82E0AA90, #F4D03F90 99%) no-repeat;
+  border-radius: 10px; 
+  color: #7B7B7B;
+  padding: 15px
+}
+
 /*--
 	call-to-action Start
 --*/
@@ -262,7 +269,7 @@ font header .navbar-default .navbar-nav li a:hover {
 	Feature Start
 --*/
 #feature {
-  background: linear-gradient(to bottom right, #4dff4d, #d580ff) no-repeat;
+  background: linear-gradient(to bottom right, #5DADE2, #82E0AA) no-repeat;
   background-position: 50% 94px;
   width: 100%;  
   display: block;
@@ -286,7 +293,7 @@ font header .navbar-default .navbar-nav li a:hover {
 #feature h2 {
   color: #fff;
   font-size: 28px;
-  font-weight: 600;
+  font-weight: 300;
   margin-bottom: 30px;
 }
 #feature p {
@@ -316,7 +323,7 @@ font header .navbar-default .navbar-nav li a:hover {
 }
 #testimonial .testimonial-carousel p {
   line-height: 28px;
-  font-weight: 300;
+  font-weight: 400;
   padding-bottom: 20px;
 }
 #testimonial .testimonial-carousel .user img {
@@ -332,7 +339,7 @@ font header .navbar-default .navbar-nav li a:hover {
 #testimonial .testimonial-carousel .user p span {
   display: block;
   color: #353241;
-  font-weight: 600;
+  font-weight: 300;
 }
 #testimonial .testimonial-carousel .owl-carousel .owl-pagination div {
   border: 1px solid #1D1D1D;
@@ -372,7 +379,7 @@ font header .navbar-default .navbar-nav li a:hover {
 -----------------------------------------------*/
 /* BLOG */ 
 #global-header {
-  background: linear-gradient(to bottom right, #4dff4d, #d580ff) no-repeat;
+  background: linear-gradient(to bottom right,#5dade2, #BB8FCE) no-repeat;
   background-size: cover;
   padding-top: 150px;
   padding-bottom: 107px;
@@ -451,8 +458,6 @@ font header .navbar-default .navbar-nav li a:hover {
   padding:4px; 
   margin-right: 5px;
 }
-
-
 
 #blogpost {
   padding-top: 100px;

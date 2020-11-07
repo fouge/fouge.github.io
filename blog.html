@@ -10,15 +10,19 @@ permalink: /blog/
       <div class="col-md-12">
         <div class="block">
           <h1>Get the latest</h1>
-          <a href="https://www.notion.so/cyrilfougeray/Hey-I-m-Cyril-e18527c028844776813f11a8f724862c" class="btn btn-view-works" target="_blank">
-          <img src="../img/notion.png" alt="Notion logo" width="20px"> What's next, on Notion</a>
+          <!-- <a href="https://www.notion.so/cyrilfougeray/Hey-I-m-Cyril-e18527c028844776813f11a8f724862c" class="btn btn-view-works" target="_blank">
+          <img src="../img/notion.png" alt="Notion logo" width="20px"> What's next, on Notion</a> -->
         </div>
       </div>
     </div>
   </div>
 </section>
 {% for post in site.posts %}
-<div class="post-area">
+<div class="row">  
+<div  class="col-md-3">
+  &nbsp;
+</div>
+<div class="post-area col-md-6">
   <a href="{{ post.url | prepend: site.baseurl }}" class="bold">{{ post.title }}</a>
   <p class="post-date">{{ post.date | date_to_long_string }} - 
     
@@ -29,5 +33,9 @@ permalink: /blog/
   <p>
     {{ post.description }}
   </p>
+</div>
+<div  class="col-md-3">
+  &nbsp;
+</div>
 </div>
 {% endfor %}
