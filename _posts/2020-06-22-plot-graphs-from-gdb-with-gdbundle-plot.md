@@ -52,9 +52,9 @@ Another consideration was to make the script run without blocking GDB for too lo
 
 That's pretty simple: 
 
-```rust
+{% highlight plain %}
 (gdb) plot var_1_name [var_2_name ...]
-```
+{% endhighlight %}
 
 There is the possibility to plot several variables because it is often useful to see how a filter is acting on the buffers for example.
 

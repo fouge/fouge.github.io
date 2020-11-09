@@ -29,13 +29,13 @@ Now that things are getting serious and to make my library production-ready, I n
 
 Firstly, the panic handler has this signature: 
 
-```rust
+{% highlight rust %}
 fn panic(panic_info: &PanicInfo) -> ! { }
-```
+{% endhighlight %}
 
 The `PanicInfo` structure is really interesting because it contains all the information about the error:
 
-```rust
+{% highlight rust linenos %}
 pub struct PanicInfo<'a> {
     payload: &'a (dyn Any + Send),
     message: Option<&'a fmt::Arguments<'a>>,
@@ -47,7 +47,7 @@ pub struct Location<'a> {
     line: u32,
     col: u32,
 }
-```
+{% endhighlight %}
 
 ### File & line
 
@@ -57,13 +57,13 @@ If you clicked on [the first link](https://medium.com/equisense/quality-assuranc
 - the line of the error into the file;
 - the error code.
 
-```rust
+{% highlight rust linenos %}
 extern "C" {
     pub fn app_error_fault_handler_release(err_code: cty::c_uint,
                                            line: cty::c_uint,
                                            cksum: cty::c_uint);
 }
-```
+{% endhighlight %}
 
 Using the panic handler, the hash is not known but I have the file name as a `&str`. So I have to compute a CRC over the string to get the hash dynamically, which is better than perfect but I don't know anyway (yet) to force the compiler and linker to use a checksum instead of the full path stored using characters.
 
@@ -75,7 +75,7 @@ Regarding the error code, it is not easy to guess the errors that can be detecte
 
 If there is a specific payload to be sent, it is obviously stored in the program itself as a human-readable string. Using the `strings` tool, I checked the binary ready to be launched in production (optimized out, without any debug symbol, etc...). The snipped below turns out to be very interesting:
 
-```
+{% highlight plain linenos %}
 $ strings _build/app_release.bin
 
 init@0x%04x  👈 Some warning messages I added myself
@@ -92,7 +92,7 @@ src/libcore/unicode/printable.rs
 efgEFG
 0123456789ABCDEF
 0123456789abcdef
-```
+{% endhighlight %}
 
 It confirms my thoughts: the messages are hardcoded inside my program.
 
@@ -102,17 +102,17 @@ It also confirms that if I want to send a short error code, I'll have to parse t
 
 Interestingly enough, looking at the strings led me to think that some error messages shouldn't exist at all. If you looked at it closely, you probably noticed that line: 
 
-```
+{% highlight plain linenos %}
 00010203040506070809101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990919293949596979899called `Option::unwrap()` on a `None` value/home/cyril/Documents/rust/panic_custom/src/lib.rs
-```
+{% endhighlight %}
 
 That message comes from my panic handler. I don't want to think about the panic handler panicking 🤯. Indeed, my panic crate was not correctly handling errors so I replaced the call to `unwrap()` with the following lines, which is the exact way to do:
 
-```rust
+{% highlight rust linenos %}
 if let Some(loc) = panic_info.location() {
 	[...]
 }
-```
+{% endhighlight %}
 
 Now that I updated my code, I don't have the panic payload for that fault anymore in the binary file. This is a double optimization: an error is prevented from happening and the code is not bloated with strings describing the errors. 🍾
 

@@ -43,17 +43,17 @@ To perform the stack dump, we are going to use CrashCatcher. If you want to read
 
 First, we need to clone the CrashCatcher repo. Using nRF52's SDK, I find it convenient to clone it in the `external` directory.
 
-```bash
+{% highlight bash linenos %}
 # From the SDK root directory
 cd external
 git clone --recursive https://github.com/adamgreen/CrashCatcher.git
-```
+{% endhighlight %}
 
 The nRF52 SDK provides an implementation of the HardFault handler that can be enabled through a defined macro in the config file `sdk_config.h` using `HARDFAULT_HANDLER_ENABLED`. We don't want to enable the default handler as we will reimplement our own so make sure the macro equals `0`.
 
 Now, we need to add the source files in the Makefile. In the case you want to implement a stack trace only for the debug target, you could add target-specific source files in the Makefile. We only need 2 files from the CrashCatcher repo:
 
-```makefile
+{% highlight make linenos %}
 SRC_FILES ?= \
     [...] \
     $(SDK_ROOT)/external/CrashCatcher/Core/src/CrashCatcher.c \
@@ -65,7 +65,7 @@ INC_FOLDERS += \
     [...] \
     $(SDK_ROOT)/external/CrashCatcher/include \
     $(SDK_ROOT)/external/CrashCatcher/Core/src/
-```
+{% endhighlight %}
 
 If you take a look at `CrashCatcher_armv7m.S`, you will find a definition, in Assembler, of the HardFault handler we are going to use. This one is preparing the stack to be dumped and then calls `CrashCatcher_Entry`, defined in `CrashCatcher.c`.
 
@@ -83,7 +83,7 @@ To continue, we are going to define those functions in a new file. Those are cal
 - `const CrashCatcherMemoryRegion* CrashCatcher_GetMemoryRegions(void)`
     - Returns an array of regions to be dumped. On the nRF52 and for my specific program, I use the RAM down to `0x20002558`. You can add any region, even memory-mapped peripheral registers to debug a peripheral.
 
-        ```c
+        {% highlight c linenos %}
         const CrashCatcherMemoryRegion* CrashCatcher_GetMemoryRegions(void)
         {
             static const CrashCatcherMemoryRegion regions[] = {
@@ -96,7 +96,7 @@ To continue, we are going to define those functions in a new file. Those are cal
             };
             return regions;
         }
-        ```
+        {% endhighlight %}
 
 - `void CrashCatcher_DumpMemory(const void* pvMemory, CrashCatcherElementSizes elementSize, size_t elementCount)`
     - Print HEX data, line by line.
@@ -111,7 +111,7 @@ In order to generate a HardFault, I am going to use a builtin function: `__built
 
 You'll see something like those characters showing up when your program crashes:
 
-```
+{% highlight plain linenos %}
 <INFO> Everything is going well so far 🌸
 <INFO> but we are about to 💥
 
@@ -121,7 +121,7 @@ You'll see something like those characters showing up when your program crashes:
 0000000000E100E001000000C0350020
 F20000007800000000E0070068FF0020
 [...]
-```
+{% endhighlight %}
 
 We can see printed the registers and memory regions in the hexadecimal format. We need to save that stack trace and make use of it.
 
@@ -133,9 +133,9 @@ Thanks to the `pyserial` package, it is very easy to read the log, line by line.
 
 As we want to print the stack trace directly from our client, we are going to use GDB and CrashDebug together. The full command is described [in the documentation](https://github.com/adamgreen/CrashDebug#how-to-run). In order to print the crash location and the local variables I will need to execute `bt full` right from GDB and do not forget to quit to get back to the Python script:
 
-```
+{% highlight plain %}
 arm-none-eabi-gdb main.elf -ex "set target-charset ASCII" -ex "target remote | CrashDebug --elf main.elf --dump MainCrashDump.txt" -ex "bt full" -ex "quit"
-```
+{% endhighlight %}
 
 You can add some GDB commands to print even more information like `info registers`.
 
@@ -144,7 +144,7 @@ Make sure to get the CrashDebug executable [here](https://github.com/adamgreen/C
 Below is a simple Python script that does the job:
 
 
-```python
+{% highlight python linenos %}
 from serial import Serial
 import sys
 import platform
@@ -199,11 +199,11 @@ while 1:
     # Print out the line
     print(line.decode('utf-8').rstrip())
 
-```
+{% endhighlight %}
 
 Let's test with our latest program to see how awesome it is. Here is an example of a program of mine. The crash is happening in `app.c`, line 1173. We can see some local variables in the current context `app_start()` such as `err_code` but also variables from the caller `main()`:
 
-```plain
+{% highlight plain linenos %}
 $ python dump.py /dev/ttyUSB0 ../../../my-awesome-product/awesome-app/awesome-board/_build/app_debug.out
 
 [...]
@@ -231,7 +231,7 @@ Crash info retrieved.
 
 ---------
 
-```
+{% endhighlight %}
 
 Isn't it awesome? 😃 No, it's not, it's crashing. 😜
 

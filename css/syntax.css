@@ -1,4 +1,12 @@
 .highlight { color: white } 
+pre {
+    background-color: #272822;
+    color: white;
+    border: 0px;
+}
+pre .code pre {
+    white-space: pre-wrap;
+}
 
 /* Monokai
  * from https://raw.githubusercontent.com/jwarby/pygments-css/master/monokai.css
