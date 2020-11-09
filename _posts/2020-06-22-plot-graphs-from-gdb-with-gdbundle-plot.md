@@ -7,7 +7,7 @@ author: Cyril
 meta:
   - tag:
     title: rust
-    class: optimized 
+    class: optimized
   - tag:
     title: debug
     class: optimized

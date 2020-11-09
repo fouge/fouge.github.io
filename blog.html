@@ -17,6 +17,18 @@ permalink: /blog/
     </div>
   </div>
 </section>
+<div class="row">
+  <div  class="col-md-3">&nbsp;</div>
+  <div  class="col-md-6" style="margin:15px; text-align: center;">
+    <span class="connected">connected</span>
+    <span class="smart">smart</span>
+    <span class="optimized">optimized</span>
+    <span class="delivered">delivered</span>
+    <span class="learn">more</span>
+  </div>
+  <div  class="col-md-3">&nbsp;</div>
+</div>
+
 {% for post in site.posts %}
 <div class="row">  
 <div  class="col-md-3">
@@ -27,7 +39,7 @@ permalink: /blog/
   <p class="post-date">{{ post.date | date_to_long_string }} - 
     
     {% for tag in post.meta %}
-    <i class="{{ tag.class }}"> {{ tag.title }} </i>
+    <span class="{{ tag.class }}">{{ tag.title }}</span>
     {% endfor %}
   </p>
   <p>

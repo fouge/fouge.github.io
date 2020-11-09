@@ -382,7 +382,7 @@ font header .navbar-default .navbar-nav li a:hover {
   background: linear-gradient(to bottom right,#5dade2, #BB8FCE) no-repeat;
   background-size: cover;
   padding-top: 150px;
-  padding-bottom: 107px;
+  padding-bottom: 100px;
   position: relative;
   background-attachment: fixed;
 }
@@ -400,14 +400,13 @@ font header .navbar-default .navbar-nav li a:hover {
 #global-header .block {
   color: #E3E3E4;
   margin: 0 auto;
-  padding-left: 90px;
   text-align: center;
 }
 #global-header .block h1 {
   font-weight: 100;
   font-size: 45px;
   letter-spacing: 6px;
-  padding-bottom: 15px;
+  padding-bottom: 0px;
   margin-top: 0;
   text-transform: capitalize;
 }
@@ -426,36 +425,46 @@ font header .navbar-default .navbar-nav li a:hover {
 
 .learn {
   background-color:#F1948A;
+  color:white;
+  font-size: small;
   border-radius: 12px; 
-  padding:4px; 
+  padding:6px; 
   margin-right: 5px;
 }
 
 .connected {
   background-color:#5DADE2;
+  color:white;
+  font-size: small;
   border-radius: 12px; 
-  padding:4px; 
+  padding:6px; 
   margin-right: 5px;
 }
 
 .smart {
   background-color:#82E0AA;
+  color:white;
+  font-size: small;
   border-radius: 12px; 
-  padding:4px; 
+  padding:6px; 
   margin-right: 5px;
 }
 
 .optimized {
   background-color:#F4D03F;
+  color:white;
+  font-size: small;
   border-radius: 12px; 
-  padding:4px; 
+  padding:6px; 
   margin-right: 5px;
 }
 
 .delivered {
   background-color:#BB8FCE;
+  color:white;
+  font-size: small;
   border-radius: 12px; 
-  padding:4px; 
+  padding:6px; 
   margin-right: 5px;
 }
 
