@@ -18,7 +18,7 @@ I wanted to write this short post because I once stumbled upon a bug that could 
 
 It all started with the simple action of adding a new value to an enum:
 
-```c
+{% highlight c linenos %}
 typedef enum {
     TEST_NOT_STARTED = -1,
     TEST_SUCCESS = 0,
@@ -26,7 +26,7 @@ typedef enum {
     // [...]
     TEST_UNKNOWN = 0xFF /// I wanted to add a new status
 } test_status_t;
-```
+{% endhighlight %}
 
 That enum value was packed into a structure that was sent over the Bluetooth 4.0 link to be decoded by the remote application. The iOS and Android applications developers were told that byte number 3 in the packet was returning the test status, but it was not.
 
@@ -42,7 +42,7 @@ Static assertions have been introduced in the C1X specification but can also be 
 
 Using GCC, try to check which flag is being used:
 
-```makefile
+{% highlight make linenos %}
 # C99 features are followed using
 -std=c99
 # if you have GNU extensions enabled as well, it can also be:
@@ -51,7 +51,7 @@ Using GCC, try to check which flag is being used:
 # or if you are using C11
 -std=c11
 -std=gnu11
-```
+{% endhighlight %}
 
 Check-out [the GCC man page](https://man7.org/linux/man-pages/man1/gcc.1.html) to get all the possible compatible standards with the GCC compiler.
 
@@ -59,7 +59,7 @@ Check-out [the GCC man page](https://man7.org/linux/man-pages/man1/gcc.1.html) t
 
 I have been using the following macro for a long time without knowing where it came from. Turns out [pixelbeat introduced the trick](https://www.pixelbeat.org/programming/gcc/static_assert.html) back in 2008:
 
-```c
+{% highlight c linenos %}
 // The magic happens below
 #define ASSERT_CONCAT_(a, b) a##b
 #define ASSERT_CONCAT(a, b) ASSERT_CONCAT_(a, b)
@@ -80,13 +80,13 @@ ct_assert(sizeof(test_status_t)==1);
 // Another usage would be to make sure that a Bluetooth 4.0 packet
 // doesn't take more than 20 bytes:
 ct_assert(sizeof(ble_pkt_t)<=20);
-```
+{% endhighlight %}
 
 ### C11 and more
 
 Here is the modern implementation, with an error message:
 
-```c
+{% highlight c linenos %}
 #include <assert.h>
 
 // This won't compile and display a nice error message
@@ -94,15 +94,15 @@ static_assert(sizeof(test_status_t)==1, "test_status_t must be one-byte long");
 
 // For our BLE 4.0 packet
 static_assert(sizeof(ble_pkt_t)<=20, "Bluetooth 4.0 packets must take less than 20 bytes");
-```
+{% endhighlight %}
 
 Here is the output when compiling:
 
-```plain
-../../tests.h:66:1: error: static assertion failed: "test_status_t must be one-byte long"
+{% highlight plain linenos %}
+../../tests.h:4:1: error: static assertion failed: "test_status_t must be one-byte long"
  static_assert(sizeof(test_status_t)==1, "test_status_t must be one-byte long");
  ^~~~~~~~~~~~~
-```
+{% endhighlight %}
 
 ## Other usages
 
@@ -110,19 +110,19 @@ Static assertions can also be used for any constant value.
 
 Let's say you are using a version to tag a data format implementation:
 
-```c
+{% highlight c linenos %}
 // file data.h
 const uint32_t DATA_FORMAT_VERSION = 3;
-```
+{% endhighlight %}
 
 And you provide an implementation to use that format, but only for a specific version:
 
-```c
+{% highlight c linenos %}
 // file data_v3.c
 #include <data.h>
 
 static_assert(HEADER_VERSION==3, "Header version not supported");
-```
+{% endhighlight %}
 
 You can probably think about other usages yourself.
 
