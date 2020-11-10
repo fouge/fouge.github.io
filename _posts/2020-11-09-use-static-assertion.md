@@ -128,6 +128,36 @@ You can probably think about other usages yourself.
 
 You might want to review some parts of the code you are maintaining to include static assertions now before doing something unfortunate in the future 😉.
 
+## Checking the configuration
+
+This is not a static assertion as described in C11 through `static_assert`, but there are other kinds of static values that we can check: macros and flags.
+
+You probably know and use that one. The final goal is the same: do not allow code to compile if it was not intended to work with the defined configuration.
+
+{% highlight c linenos %}
+#define MY_CUSTOM_CONFIG
+#define MY_CUSTOM_VALUE    1
+
+// If not defined, the compiler will yield an error
+#ifndef MY_CUSTOM_CONFIG
+#error This implementation is made to work with MY_CUSTOM_CONFIG
+#endif
+
+// if value cannot be used due to the condition not passing, the compiler
+// yields an error
+#if MY_CUSTOM_VALUE < 2
+#error MY_CUSTOM_VALUE must be at least 2.
+#endif
+{% endhighlight %}
+
+## Rust
+
+As you probably know, if you've been reading my articles, Rust is becoming a great contender to C for embedded software.
+
+Regarding static assertions, Rust has [its crate](https://docs.rs/static_assertions/1.1.0/static_assertions/index.html) ready to be used. The crate is made to check types, sizes, configurations and some more use-cases specific to Rust (check that a type does not implement a trait for example)! 👌
+
+As always, the documentation is well written with some great examples, so make sure to read about all the defined macros and use them extensively! 🦀
+
 ---
 
 Breaking compilation as soon as possible is a great way to squash the bugs efficiently, so it should be a habit to use it whenever needed.
