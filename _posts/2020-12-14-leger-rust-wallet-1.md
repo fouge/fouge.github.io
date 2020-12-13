@@ -13,7 +13,7 @@ meta:
     class: optimized
 ---
 
-Introducing [Léger](https://github.com/fouge/leger-rs). &#129718; *Léger* means *lightweight* in french, not to confound with Ledger, the French company 🙂.
+Introducing [Léger](https://github.com/fouge/leger-rs). &#129718;
 
 ---
 
@@ -85,8 +85,8 @@ If you want to implement new features, let me know by [opening an issue or comme
 
 ## Conclusion
 
-Freelancing hasn't always been as I expected it to be. I initially planned to have one day a week reserved for my side projects but it's hard to tell customers that I won't deliver as fast as they want because I prefer to spend my time on personal non-paid work. Anyway, that's another subject.
-
-I really enjoyed having almost a month of free time though, to work on that side project. I hope this will serve others and as I said, I'll keep working on it so stay tuned!
+Having time for side projects is great and I really enjoyed this month of free time. I hope this will serve others and as I said, I'll keep working on it so stay tuned!
 
 👋
+
+PS: *Léger* means *lightweight* in French, cause that what we want, being léger. Pronouncing it the English way could end up saying "[Ledger](https://www.ledger.com/)" but that one is the cheesy version, otherwise, they would have taken the name "Léger" 😃.
