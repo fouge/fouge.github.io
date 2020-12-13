@@ -5,7 +5,7 @@ description: Learning by doing. Why did I choose the Substrate framework to lear
 date: 2020-05-04
 author: Cyril
 meta: 
-  - meta1:
+  - tag:
     title: learn
     class: learn
 ---
@@ -65,10 +65,10 @@ My guess is that building on Ethereum can be constraining as the token is depend
 
 I guess a lot. If those are totally configurable, it means I will have to learn a lot from all the different configurations and features a blockchain can use. From what I have seen, Parity made choices that imply ousting configuration options, but since I am not an expert, I am not able to complain and the team behind the project seems to take thoughtful decisions.
 
-## Conclusion 
+## Conclusion
 
 Substrate is making the task of getting the hands dirty way easier than a few years back, while still being challenging, which makes it a great alternative for me to dive into the blockchain technologies. I used to read articles treating blockchain randomly but by leveraging Substrate, I will improve my learning curve.
 
-Make sure to follow along if you are interested in learning more about blockchains as well. 
+Make sure to follow along if you are interested in learning more about blockchains as well.
 
 👋
