@@ -79,7 +79,6 @@ I have some more work before Léger can be used by developers without too much h
 - Add RPC calls and extrinsics support.
 - Improve error handling: I need to rightfully design the returned errors so that developers can easily understand what's wrong and how to respond to any error occurring in the library.
 - Add providers (Cosmos or Algorand?). I contacted Ted, working on [Algoduino](https://algoduino.com/), a wallet for embedded devices to work with Algorand. We might end up joining our forces 💪.
-- Publish a fully working example for the nRF91 SoC would be great!
 - Write a new crate to handle private keys and signing (ed25519 and sr25519), using a secure element if possible. I don't currently have any compatible hardware though.
 - Write a new crate that implements `embedded_nal` for the nRF91. *Rust is eating the embedded world* 😄.
 
