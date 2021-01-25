@@ -75,12 +75,20 @@ The script is doing nothing else but to modify `version.ini` and rewrite `versio
 Now let's take a step further and add a new target: `new_version`. The goal of this target is obviously to create a new firmware version. Executing it will tag the current commit to obtain a new release version. This will later trigger [CI jobs](http://www.cyrilfougeray.com/2020/10/03/firmware-qa-ci-cd.html) and generate a firmware update package. Bonus: I also print the remaining TODOs in the code as one of my goals before a release is to have all the TODOs removed. Any TODO that stays too long should be added as an issue in your project management tool.
 
 {% highlight make linenos %}
+major_version = $(shell sed -n -e 's/^\s*major\s*=\s*//p' version.ini)
+minor_version = $(shell sed -n -e 's/^\s*minor\s*=\s*//p' version.ini)
+patch_version = $(shell sed -n -e 's/^\s*patch\s*=\s*//p' version.ini)
+bl_version = $(shell sed -n -e 's/^\s*bl\s*=\s*//p' version.ini)
+hw_version = $(shell sed -n -e 's/^\s*hw\s*=\s*//p' version.ini)
+
 new_version: increment_patch
-	git commit -am "Release package ${major_version}.${minor_version}.${patch_version}-${bl_version}" --allow-empty
-	git tag -a v/${major_version}.${minor_version}.${patch_version} -m "Release package ${major_version}.${minor_version}.${patch_version}-${bl_version}"
+	git commit -am "Release package $(major_version).$(minor_version).$(patch_version)-$(bl_version)" --allow-empty
+	git tag -a v/$(major_version).$(minor_version).$(patch_version) -m "Release package $(major_version).$(minor_version).$(patch_version)-$(bl_version)"
 	@echo "\nRemaining TODOs:"
 	@grep -rnw -e TODO my/
 {% endhighlight %}
+
+There is a little warning here. As you can see, I am commiting all changes (`-a` flag), so make sure to have stashed any unwanted commit before executing the target.
 
 We now have targets to increment the version number in `version.ini`.
 
