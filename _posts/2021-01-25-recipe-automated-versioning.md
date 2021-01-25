@@ -88,7 +88,7 @@ new_version: increment_patch
 	@grep -rnw -e TODO my/
 {% endhighlight %}
 
-There is a little warning here. As you can see, I am commiting all changes (`-a` flag), so make sure to have stashed any unwanted commit before executing the target.
+There is a little warning here. As you can see, I am committing all changes (`-a` flag), so make sure to have stashed any unwanted changes before executing the target.
 
 We now have targets to increment the version number in `version.ini`.
 
