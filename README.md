@@ -2,18 +2,26 @@
 
 ## Purpose
 
-This website has been created as a personal website to centralize and advertize the work of Cyril Fougeray as a Freelance developer.
+This is Cyril Fougeray's personal website, built with Jekyll and published through GitHub Pages.
 
 ## Install
 
 ```shell
-# better have the gems in local directory (config is stored)
-bundle config set --local path 'vendor/bundle'
-# install (Mac M1: run using x86_64 arch due to missing dependency)
-[arch -arch x86_64] bundle install [--path vendor/bundle]
-# run
-[arch -arch x86_64] bundle exec jekyll serve
+# macOS: install the Ruby version used by this repository
+brew install ruby@3.3
+export PATH="$(brew --prefix ruby@3.3)/bin:$PATH"
+
+# install the site dependencies locally
+gem install bundler
+bundle config set --local path vendor/bundle
+bundle install
+
+# preview the site
+bundle exec jekyll serve
 ```
+
+Then open <http://127.0.0.1:4000>. The repository targets Ruby 3.3 and tracks
+`Gemfile.lock` so local builds use the same dependency set.
 
 ## Note
 

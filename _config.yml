@@ -14,11 +14,11 @@ keep_files:
 
 
 # Site settings
-title: Cyril Fougeray
+title: Cyril Fougeray | Embedded Software Engineer
 # No more than 155 characters for meta description
-meta_desc: I am a passionate Freelance Embedded Software Engineer, at your service. I build low-power connected devices that are ready to ship.
-subtitle: "Freelance Embedded Software Engineer"
-url: fouge.github.io # the base hostname & protocol for your site
+meta_desc: Embedded software engineer building dependable connected products, from firmware and RTOS to device integration and production systems.
+subtitle: "Embedded Software Engineer"
+url: https://www.cyrilfougeray.com # the base hostname & protocol for your site
 # baseurl: "/the/subpath/of/your/site" # Set this value to "" if you want your site to be root
 baseurl: ""
 cover: "/assets/cover.png"
@@ -44,4 +44,3 @@ descriptions:
 
   - cat: Debugging
     desc: "Debugging related posts"
-    

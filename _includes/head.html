@@ -25,7 +25,7 @@
   gtag('js', new Date());
 
   gtag('config', 'UA-160868445-1');
-</script>`
+</script>
 
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.2.min.js"><\/script>')</script>
@@ -40,26 +40,28 @@
 <script src="{{ site.baseurl }}/js/main.js"></script>
 
 <script>
-    window.onload = function() {
-        twitter_share.href = 'https://twitter.com/share?text="{{ page.title }}"%20by%20@cyrilfougeray%20' + encodeURIComponent(location.href) + ''
-        linkedin_share.href = 'https://www.linkedin.com/shareArticle?url=cyrilfougeray.com' + window.location.pathname
+  window.addEventListener('DOMContentLoaded', function() {
+    var twitterShare = document.getElementById('twitter_share');
+    var linkedinShare = document.getElementById('linkedin_share');
+    var shareButton = document.getElementById('share_btn');
+
+    if (twitterShare) {
+      twitterShare.href = 'https://twitter.com/share?text="{{ page.title }}"%20by%20@cyrilfougeray%20' + encodeURIComponent(location.href);
     }
 
-    // is Web Share API supported?
-    if ( navigator.share ) {
-        // share button click handler
-        document.getElementById('share_btn').addEventListener('click', () => {
+    if (linkedinShare) {
+      linkedinShare.href = 'https://www.linkedin.com/shareArticle?url=' + encodeURIComponent(location.href);
+    }
 
-        // share page information
+    if (navigator.share && shareButton) {
+      shareButton.addEventListener('click', function() {
         navigator.share({
-            url: 'https://example.com/',
-            title: 'My example page',
-            text: 'An example page implementing the Web Share API.'
+          url: location.href,
+          title: '{{ page.title }}'
         });
-    });
-
-}
-
+      });
+    }
+  });
 </script>
 
 <!-- Hotjar Tracking Code for www.cyrilfougeray.com -->

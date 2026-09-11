@@ -31,3 +31,99 @@
 .post-area a:hover {
   color: #0D0017;
 }
+
+#intro .block img.img_about_me {
+  border-radius: 4px;
+  padding-left: 0;
+  padding-top: 45px;
+}
+
+/* Recent experience */
+#experience {
+  background: #f7f8fa;
+  padding: 100px 0;
+}
+
+#experience .section-title {
+  text-align: center;
+}
+
+.experience-row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.experience-row > [class*="col-"] {
+  display: flex;
+}
+
+.experience-card {
+  background: #fff;
+  border: 1px solid #e7e9ed;
+  border-top: 4px solid #82e0aa;
+  border-radius: 4px;
+  box-shadow: 0 12px 35px rgba(29, 25, 44, 0.07);
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  margin-bottom: 30px;
+  padding: 34px 30px 30px;
+}
+
+.experience-card-current {
+  border-top-color: #5dade2;
+}
+
+.experience-card .experience-period {
+  color: #8b8497;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  margin: 0 0 12px;
+  padding: 0;
+  text-transform: uppercase;
+}
+
+.experience-card h3 {
+  color: #333;
+  font-size: 21px;
+  line-height: 1.35;
+  margin: 0 0 7px;
+}
+
+.experience-card h4 {
+  color: #655e7a;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.5;
+  margin: 0 0 18px;
+}
+
+.experience-card > p:not(.experience-period) {
+  color: #777;
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+.experience-card a {
+  color: #4b7e9e;
+  font-size: 13px;
+  font-weight: 600;
+  margin-top: auto;
+  padding-top: 10px;
+}
+
+@media only screen and (max-width: 767px) {
+  #experience {
+    padding: 70px 0 50px;
+  }
+
+  .experience-row,
+  .experience-row > [class*="col-"] {
+    display: block;
+  }
+
+  .experience-card {
+    padding: 28px 24px;
+  }
+}
